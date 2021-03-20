@@ -31,5 +31,12 @@ describe('Counter Testing', () => {
     // expect the button's func
     expect(wrapper.find('#counter-value').text()).toBe('1')
   })
+
+  test('render the click event of decrement button and decrement counter value', () => {
+    // find the button
+    wrapper.find('#decrement-btn').simulate('click');
+    // expect the button's func
+    expect(wrapper.find('#counter-value').text()).toBe('-1')
+  })
 })
 
