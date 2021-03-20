@@ -10,9 +10,7 @@ describe('Counter Testing', () => {
     // shallow creates instances of a component.
     // it only renders App component not childs.
     const wrapper = shallow(<App />);
-    render(<App />);
-    const linkElement = screen.getByText('This is counter app');
-    expect(linkElement).toBeInTheDocument();
+    expect(wrapper.find('h1').text()).toContain('This is counter app')
   });
 })
 
