@@ -26,7 +26,9 @@ describe('Counter Testing', () => {
   })
 
   test('render the click event of increment button and increment counter value', () => {
+    // find the button
     wrapper.find('#increment-btn').simulate('click');
+    // expect the button's func
     expect(wrapper.find('#counter-value').text()).toBe('1')
   })
 })
