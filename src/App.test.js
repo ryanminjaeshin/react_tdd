@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Counter from './Counter';
+import App from './App';
 
 describe('Counter Testing', () => {
   let wrapper;
   // beforeEach => run every function before tests
   beforeEach(() => {
-     wrapper = shallow(<Counter />)
+     wrapper = mount(<App />);
   })
   test('renders the title of counter', () => {
     // shallow creates instances of a component.
